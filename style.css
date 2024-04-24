@@ -22,6 +22,7 @@ body {
   color: #fff;
   text-align: center;
   /* opacity: 0.9; */
+
 }
 
 /* Input and search button */
@@ -66,10 +67,28 @@ body {
 #glass-icon {
   font-size: 20px;
 }
+.weather{
+  overflow: hidden;
+}
 .weather {
   display: none;
+  
 }
-
+.weather-data{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1.5s ease-out forwards;
+}
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 /* weather icon */
 #weather-icon {
   height: 100px;
@@ -121,13 +140,26 @@ body {
   margin-top: 60px;
   align-items: center;
   display: none;
-  /* transition: transform 0.3s;
-  transition: transform 0.3s ease-in; */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1.5s ease-out forwards;
 }
 .tooltip-container img {
   height: 170px;
   width: 170px;
+  
 }
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 
 .tooltip-container:hover{
   transition: transform 0.8s ease-in-out;

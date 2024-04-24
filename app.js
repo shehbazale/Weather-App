@@ -44,3 +44,4 @@ function getCity() {
   checkWeather(searchInput.value);
   searchInput.value = "";
 }
+
